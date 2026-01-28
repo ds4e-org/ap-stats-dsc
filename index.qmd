@@ -25,7 +25,7 @@ title: Preface
 
 :::: {.column width="50%"}
 ::: {style="text-align: left;"}
-![](images/dsa-logo.png){height="30px" fig-cap="" style="margin-top: 22px;"}
+![](images/dsa-logo.png){height="130px" fig-cap=""}
 :::
 ::::
 :::::::
