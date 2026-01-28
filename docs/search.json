@@ -1,0 +1,222 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "After the AP Statistics Data Science Challenge",
+    "section": "",
+    "text": "This resource is intended for high school statistics teachers seeking to extend student learning beyond AP Statistics course. It provides a teacher-facing guide for the After the AP Data Science Challenge.\nThe materials for the challenge are designed for students who have completed AP Statistics.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Preface</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "Purpose\nThis resource is a teacher guide for a data science project designed to extend student learning beyond the AP Statistics course. The guide supports high school statistics teachers in planning and facilitating a data science project that builds on students’ prior statistics experience and does not assume prior coursework in programming or data science.\nIt explains the structure of the project, the dataset used, and the types of analyses students are expected to pursue. The project is intended for students who have completed AP Statistics.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#purpose",
+    "href": "intro.html#purpose",
+    "title": "Introduction",
+    "section": "",
+    "text": "Data Science Tools\n\n\n\nThis project uses R with the coursekata package (CourseKata Team 2024) for both data manipulation and visualization.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#standards-alignment",
+    "href": "intro.html#standards-alignment",
+    "title": "Introduction",
+    "section": "Standards Alignment",
+    "text": "Standards Alignment\nThe project aligns with both the Pre-K–12 Guidelines for Assessment and Instruction in Statistics Education II (GAISE II) and the Data Science Learning Progressions.\n\n\n\n\nCourseKata Team. 2024. “Coursekata: An r Package for Teaching Statistics and Data Science.” https://coursekata.org.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "dataset.html",
+    "href": "dataset.html",
+    "title": "Dataset",
+    "section": "",
+    "text": "The College Scorecard Database\nThe project uses data from the College Scorecard Database. The US Department of Education’s College Scorecard Database shows various metrics of cost, enrollment, size, student debt, student demographics, and alumni success. It describes almost every university, college, community college, trade school, and certificate program in the United States. The database was created to increase transparency in higher education and to support analysis of college access, affordability, and outcomes.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Dataset</span>"
+    ]
+  },
+  {
+    "objectID": "dataset.html#the-college-scorecard-database",
+    "href": "dataset.html#the-college-scorecard-database",
+    "title": "Dataset",
+    "section": "",
+    "text": "Data Coverage\n\n\n\nThis dataset includes data from the 2020–2021 academic year only.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Dataset</span>"
+    ]
+  },
+  {
+    "objectID": "dataset.html#about-the-college-scorecard-database",
+    "href": "dataset.html#about-the-college-scorecard-database",
+    "title": "Dataset",
+    "section": "About the College Scorecard Database",
+    "text": "About the College Scorecard Database\nThe College Scorecard Database compiles data from multiple federal administrative sources, including the Integrated Postsecondary Education Data System (IPEDS), the National Student Loan Data System (NSLDS), and federal student aid records. Unlike survey-based datasets, the College Scorecard primarily relies on administrative data reported by institutions or generated through federal programs.\nThe database is updated annually and includes information for most degree-granting postsecondary institutions that participate in federal financial aid programs. Many variables are available across multiple years, though coverage varies by variable due to changes in reporting requirements, data availability, and methodology.\nBecause the College Scorecard aggregates data from different sources and cohorts, some measures (such as completion rates, debt, and earnings) are based on specific student subpopulations and time windows. As a result, careful attention to variable definitions, units, and years is required when interpreting results.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Dataset</span>"
+    ]
+  },
+  {
+    "objectID": "dataset.html#the-project-dataset",
+    "href": "dataset.html#the-project-dataset",
+    "title": "Dataset",
+    "section": "The Project Dataset",
+    "text": "The Project Dataset\nThe dataset used for this project is a subset of the full College Scorecard Database, downloaded for the 2021-2022 Academic Year. The original database contains thousands of variables and records spanning multiple years and institutions.\n\nData Preparation & Cleaning\nThe dataset used in this project is based on the original College Scorecard data but includes pre-processing steps to make it suitable for classroom use.\nThe following changes were made prior to student use:\n\nVariables were renamed using consistent, descriptive naming conventions.\nCategorical variables (such as region, ownership, and highest degree awarded) were standardized for clarity.\nMonetary variables were expressed in consistent units to support comparison.\n\nThese steps were taken to preserve the structure and intent of the original College Scorecard data while reducing barriers to analysis for students.\nTeachers and students should be aware that this dataset is not a raw extract from the College Scorecard Database, but a prepared version designed for instructional use and exploratory analysis.\n\n\nTidy and Tame Data Considerations\nThe project dataset has been prepared to follow principles of tidy data (Wickham 2014) and tame data (Kim, Ismay, and Chunn 2018) to support exploratory analysis.\nIn this dataset:\n\nEach row represents a single institution.\nEach column represents a single variable.\nEach cell contains a single, well-defined value.\n\nVariables were also selected and organized to make the dataset tame, meaning, manageable, interpretable, and appropriate for classroom analysis. This includes limiting the number of variables, using consistent naming conventions, and providing variables that are meaningful for comparative analysis across institutions.\nThese design choices reduce unnecessary data wrangling and allow students to focus on asking questions, exploring patterns, and interpreting results, while still working with authentic, real-world data.\n\n\n\n\nKim, Albert Y., Chester Ismay, and Jennifer Chunn. 2018. “The Fivethirtyeight r Package: ’Tame Data’ Principles for Introductory Statistics and Data Science Courses.” Technology Innovations in Statistics Education 11 (1). https://escholarship.org/uc/item/0rx1231m.\n\n\nWickham, Hadley. 2014. “Tidy Data.” Journal of Statistical Software 59. https://doi.org/10.18637/jss.v059.i10.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Dataset</span>"
+    ]
+  },
+  {
+    "objectID": "var.html",
+    "href": "var.html",
+    "title": "Variables",
+    "section": "",
+    "text": "Names & Descriptions\nThis table provides brief descriptions of each variable used in the project. It is intended as a quick reference for understanding what each variable represents.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Variables</span>"
+    ]
+  },
+  {
+    "objectID": "var.html#names-descriptions",
+    "href": "var.html#names-descriptions",
+    "title": "Variables",
+    "section": "",
+    "text": "Variable\nDescription\n\n\n\n\nopeid\nOfficial ID number for the college or institution.\n\n\nname\nName of the college or institution.\n\n\ncity\nCity in which the college or institution is located.\n\n\nstate\nState in which the college or institution is located.\n\n\nregion\nU.S. geographic region in which the college or institution is located.\n\n\nmedian_debt\nMedian student loan amount at the time of entering repayment, in thousands of dollars.\n\n\ndefault_rate\nPercent of the institution’s borrowers in default on student loans (recent cohorts), including graduates, transfers, and dropouts.\n\n\nhighest_degree\nHighest degree awarded by the institution (Certificate, Associates, Bachelors, Graduate).\n\n\nownership\nControl of the institution (Public, Private nonprofit, Private for-profit).\n\n\nlocale\nLocale surrounding the institution (Large City, Small City, Suburb, Town, Rural).\n\n\nhbcu\nIndicator for historically Black colleges and universities (No, Yes).\n\n\nadmit_rate\nPercent of applicants who were offered admission.\n\n\nsat_avg\nAverage equivalent SAT score of admitted students.\n\n\nonline_only\nIndicator for whether the institution offers only distance (online) classes (No, Yes).\n\n\nenrollment\nNumber of undergraduate or certificate-seeking students enrolled.\n\n\nnet_price\nAverage cost of attendance minus average financial aid, in thousands of dollars.\n\n\navg_cost\nAverage cost of attendance, including tuition, books, and living expenses, in thousands of dollars.\n\n\nnet_tuition\nNet tuition revenue per student (tuition minus discounts and allowances), in thousands of dollars.\n\n\ned_spending_per_student\nInstructional expenditures per student, in thousands of dollars.\n\n\navg_faculty_salary\nAverage faculty salary, in thousands of dollars.\n\n\npct_pell\nPercent of undergraduates who received a Pell Grant.\n\n\npct_fed_loan\nPercent of undergraduates who received a federal student loan.\n\n\ngrad_rate\nGraduation rate within 150% of normal time (e.g., within 6 years for a 4-year degree).\n\n\npct_firstgen\nPercent of students who are first-generation college students.\n\n\nmed_fam_income\nMedian family income of students, in thousands of dollars.\n\n\nmed_alum_earnings\nMedian earnings of former students 10 years after entry, in thousands of dollars.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Variables</span>"
+    ]
+  },
+  {
+    "objectID": "tips.html",
+    "href": "tips.html",
+    "title": "Helpful Notebook Tips",
+    "section": "",
+    "text": "Introduction to Jupyter Notebook\nA Jupyter Notebook is a web-based interactive computing environment that supports programming in Python, R, and other languages (Stokes and Harding 2025). In this project, you will use Jupyter Notebooks to write code, explore data, and document your analysis.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Helpful Notebook Tips</span>"
+    ]
+  },
+  {
+    "objectID": "tips.html#introduction-to-jupyter-notebook",
+    "href": "tips.html#introduction-to-jupyter-notebook",
+    "title": "Helpful Notebook Tips",
+    "section": "",
+    "text": "Overview of a Jupyter Notebook\nJupyter notebooks allow users to create and share documents that combine code, equations, visualizations, and formatted text (Stokes and Harding 2025). They are commonly used for data science because users can write and run code step by step, document their thinking, and view results directly alongside the code that produced them.\n\n\n\n\n\n\nAvoid Multiple Tabs\n\n\n\nAvoid opening multiple notebooks in separate tabs, as this can lead to memory overload, forcing you to restart your session.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Helpful Notebook Tips</span>"
+    ]
+  },
+  {
+    "objectID": "tips.html#code-text-cells",
+    "href": "tips.html#code-text-cells",
+    "title": "Helpful Notebook Tips",
+    "section": "Code & Text Cells",
+    "text": "Code & Text Cells\nA Jupyter Notebook has three types of cells. For this project, you will use only two:\n\nCode cells for writing and running Python code\nMarkdown or text cells for entering written responses.\n\n\nRunning Cells in a Jupyter Notebook\nIn a Jupyter Notebook, you run cells one at a time to see code output or display formatted text. To run a cell, click inside the cell and then click the Run button in the toolbar at the top of the notebook.\n\n\n\nRun button in the Jupyter toolbar\n\n\nYou can also use keyboard shortcuts:\n\nPCs and Chromebooks: Hold Ctrl and press Enter\nMacs: Hold Command (⌘) and press Enter\n\n\n\nAdding Cells\nUse the + button in the top toolbar to add a new cell.\n\n\n\n+ button in the Jupyter toolbar\n\n\nThen set the cell type as needed:\n\n\n\nCode or Markdown button in the Jupyter toolbar\n\n\n\nChoose Code for code\nChoose Markdown for text\n\n\n\nRunning All Cells from Top Down\nThe Save button saves your code and text, but it does not save data stored in memory. Whenever you reopen a notebook, you should re-run all code cells from the top.\nTo do this, go to Kernel → Restart & Run All.\n\n\n\n\n\n\nRestart & Run All\n\n\n\nThis option restarts the notebook and runs every cell in order from top to bottom. If a code cell encounters an error, execution will stop and later cells will not run.\n\n\n\n\n\nRestart & Run All button in the Jupyter toolbar\n\n\n\n\n\n\nStokes, David J., and Mahmoud Harding. 2025. “A Project-Based Approach to Introductory R and Python for Data Science.” https://djstokes02.github.io/IntroRPython4DS/.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Helpful Notebook Tips</span>"
+    ]
+  },
+  {
+    "objectID": "commands.html",
+    "href": "commands.html",
+    "title": "Useful R Commands",
+    "section": "",
+    "text": "Notebook 1: Basic R & Data Exploration",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Useful R Commands</span>"
+    ]
+  },
+  {
+    "objectID": "commands.html#notebook-1-basic-r-data-exploration",
+    "href": "commands.html#notebook-1-basic-r-data-exploration",
+    "title": "Useful R Commands",
+    "section": "",
+    "text": "Assignment Operator (&lt;-)\nThe assignment operator &lt;- is used to store a value in an object.\nSyntax\nobject_name &lt;- value\nExample\n\n# Store value 10 in x\nx &lt;- 10\n\n# Print out value of x\nx\n\n[1] 10\n\n\n\n\nhead()\nThe head() function displays the first 6 rows of a dataset.\nSyntax\nhead(dataset_name)\nExample\n\nhead(dat)\n\n    OPEID                                name       city state region\n1  100200            Alabama A & M University     Normal    AL  South\n2  105200 University of Alabama at Birmingham Birmingham    AL  South\n3 2503400                  Amridge University Montgomery    AL  South\n4  105500 University of Alabama in Huntsville Huntsville    AL  South\n5  100500            Alabama State University Montgomery    AL  South\n6  105100           The University of Alabama Tuscaloosa    AL  South\n  median_debt default_rate highest_degree         ownership     locale hbcu\n1      15.250         12.1       Graduate            Public Small City  Yes\n2      15.085          4.8       Graduate            Public Small City   No\n3      10.984         12.9       Graduate Private nonprofit Small City   No\n4      14.000          4.7       Graduate            Public Small City   No\n5      17.500         12.8       Graduate            Public Small City  Yes\n6      17.671          4.0       Graduate            Public Small City   No\n  admit_rate SAT_avg online_only enrollment net_price avg_cost net_tuition\n1      89.65     959          No       5090    15.529   23.445       8.101\n2      80.60    1245          No      13549    16.530   25.542      11.986\n3         NA      NA         Yes        298    17.618   20.100      13.890\n4      77.11    1300          No       7825    17.208   24.861       8.279\n5      98.88     938          No       3603    19.534   21.892       9.302\n6      80.39    1262          No      30610    20.917   30.016      14.705\n  ed_spending_per_student avg_faculty_salary pct_PELL pct_fed_loan grad_rate\n1                   4.836              7.599    70.95        75.04     28.66\n2                  14.691             11.380    33.97        46.88     61.17\n3                   3.664              4.545    74.52        84.93     25.00\n4                   8.320              9.697    24.03        38.55     57.14\n5                   9.579              7.194    73.68        78.05     31.77\n6                   9.650             10.349    17.18        36.44     72.14\n  pct_firstgen med_fam_income med_alum_earnings\n1     36.58281        23.5530            36.339\n2     34.12237        34.4890            46.990\n3     51.25000        15.0335            37.895\n4     31.01322        44.7870            54.361\n5     34.34343        22.0805            32.084\n6     22.57127        66.7335            52.751\n\n\n\n\ndim()\nThe dim() function displays the dimensions (rows × columns) of a dataset.\nSyntax\ndim(dataset_name)\nExample\n\ndim(dat)\n\n[1] 4435   26\n\n\nThe first number is the number of rows (horizontal), and the second is the number of columns (vertical).\n\n\nselect()\nThe select() function is used to select only certain variables (columns) from a dataset.\nSyntax\nnew_data &lt;- select(dataset_name, col1, col2, ...)\nExample\n\nexample_dat &lt;- select(dat, name, median_debt, ownership, admit_rate, hbcu)\n\n\n\nsubset()\nThe subset() function filters a dataset to obtain certain observations (rows), based on conditions.\nSyntax\nsubset(dataset_name, condition)\nExample\n\nsubset(example_dat, hbcu == \"Yes\" & admit_rate &lt; 40)\n\n                                               name median_debt\n461                       Delaware State University      18.264\n473                               Howard University      19.500\n491  Florida Agricultural and Mechanical University      18.750\n503                     Florida Memorial University      17.155\n1376                        Alcorn State University      16.895\n1401                                   Rust College      11.226\n2747                             Hampton University      18.500\n             ownership admit_rate hbcu\n461             Public      39.34  Yes\n473  Private nonprofit      38.64  Yes\n491             Public      32.98  Yes\n503  Private nonprofit      38.41  Yes\n1376            Public      37.72  Yes\n1401 Private nonprofit      29.47  Yes\n2747 Private nonprofit      36.00  Yes\n\n\n\n\nCommon Conditions\n\n\n\nOperator\nMeaning\nExample.\n\n\n\n\n==\nEquals exactly\nx == 10\n\n\n!=\nDoes not equal\nx != 10\n\n\n&lt;\nLess than\nx &lt; 10\n\n\n&gt;\nGreater than\nx &gt; 10\n\n\n&lt;=\nLess than or equal to\nx &lt;= 10\n\n\n&gt;=\nGreater than or equal to\nx &gt;= 10\n\n\n|\nLogical OR\nx &lt; 5 | x &gt; 10\n\n\n&\nLogical AND\nx &gt; 5 & x &lt; 10\n\n\n\n\n\narrange()\nThe arrange() function orders the rows in a dataset based on one or more variables.\nSyntax\narrange(data_name, column_name)\nExample (ascending order)\narrange(example_dat, admit_rate)\n\n\n                                         name median_debt         ownership\n1                   Curtis Institute of Music      16.250 Private nonprofit\n2                          Harvard University      12.072 Private nonprofit\n3                         Stanford University      11.000 Private nonprofit\n4                        Princeton University      10.355 Private nonprofit\n5                             Yale University      12.000 Private nonprofit\n6 Columbia University in the City of New York      19.250 Private nonprofit\n  admit_rate hbcu\n1       2.44   No\n2       5.01   No\n3       5.19   No\n4       5.63   No\n5       6.53   No\n6       6.66   No\n\n\n\n\ndesc()\nThe desc() function modifies arrange() to put data in descending order.\nSyntax\narrange(dataset_name, desc(column_name))\nExample (descending order)\narrange(example_dat, desc(admit_rate))\n\n\n                                                name median_debt\n1 University of Arkansas Community College-Morrilton       6.250\n2                      Design Institute of San Diego      31.000\n3                                  Naropa University      16.390\n4                        VanderCook College of Music      27.000\n5                  Saint Elizabeth School of Nursing      20.291\n6                 Maharishi International University      13.085\n           ownership admit_rate hbcu\n1             Public        100   No\n2 Private for-profit        100   No\n3  Private nonprofit        100   No\n4  Private nonprofit        100   No\n5  Private nonprofit        100   No\n6  Private nonprofit        100   No\n\n\n\n\n($) operator\nThe $ operator selects a single variable (column) from a dataset.\nSyntax\ndataset_name$column_name\n\n\ntable()\nThe table() function displays frequency counts for the values of a categorical variable.\nSyntax\ntable(dataset_name$column_name)\nExample\n\ntable(dat$highest_degree)\n\n\n Associates   Bachelors Certificate    Graduate \n       1096         501        1374        1464 \n\n\n\n\ngf_histogram()\nThe gf_histogram() function creates a histogram of a quantitative variable.\nSyntax\ngf_histogram(~variable_name, data = dataset_name)\nExample\n\ngf_histogram(~admit_rate, data = dat)\n\nWarning: Removed 2731 rows containing non-finite outside the scale range\n(`stat_bin()`).\n\n\n\n\n\n\n\n\n\n\n\ngf_bar()\nThe gf_bar() function creates a bar plot of a categorical variable.\nSyntax\ngf_bar(~variable_name, data = dataset_name)\nExample\n\ngf_bar(~highest_degree, data = dat)\n\n\n\n\n\n\n\n\n\n\n(~) Symbol\nThe ~ symbol is often used to separate the outcome variable (\\(y\\)) and predictor variable (\\(x\\)) in graphs and models:\noutcome ~ predictor\n\n\ngf_boxplot()\nThe gf_boxplot() function creates boxplots.\nSyntax\ngf_boxplot(outcome ~ predictor, data = dataset_name)\nExample\n\ngf_boxplot(admit_rate ~ highest_degree, data = dat)\n\nWarning: Removed 2731 rows containing non-finite outside the scale range\n(`stat_boxplot()`).\n\n\n\n\n\n\n\n\n\n\nadmit_rate ~ highest_degree means that admit_rate is the outcome (\\(y\\)) variable and highest_degree is the predictor (\\(x\\)) variable.\nThe boxplot displays admit_rate on the \\(y-\\)axis and highest_degree on the \\(x-\\)axis.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Useful R Commands</span>"
+    ]
+  },
+  {
+    "objectID": "commands.html#notebook-2-simple-linear-regression",
+    "href": "commands.html#notebook-2-simple-linear-regression",
+    "title": "Useful R Commands",
+    "section": "Notebook 2: Simple Linear Regression",
+    "text": "Notebook 2: Simple Linear Regression\n\n(~) Symbol\nThe ~ symbol is used to separate the outcome (\\(y\\)) variable and the predictor (\\(x\\)) variable in graphs and models.\nSyntax\noutcome ~ predictor\nExample\n\ndefault_rate ~ pct_PELL\n\ndefault_rate ~ pct_PELL\n\n\nIn this example, default_rate is the outcome (\\(y\\)) variable and pct_PELL is the predictor (\\(x\\)) variable.\n\n\ngf_point()\nThe gf_point() function creates a scatterplot.\nSyntax\ngf_point(outcome ~ predictor, data = dataset_name)\nExample\n\ngf_point(default_rate ~ pct_PELL, data = dat)\n\n\n\n\n\n\n\n\n\ndefault_rate ~ pct_PELL specifies default rate on the \\(y\\)-axis and percent PELL on the \\(x\\)-axis\ndata = dat tells the function which dataset to use\n\n\n\n(%&gt;%) Pipe Operator\nThe %&gt;% operator pipes the result of one command into the next command. It is often used to layer models on top of graphs.\nSyntax\ncommand_1 %&gt;% command_2\nExample\n\ngf_point(default_rate ~ pct_PELL, data = dat) %&gt;%\ngf_lm(color = \"orange\")\n\n\n\n\n\n\n\n\n\nThe first command creates the scatterplot\nThe second command overlays a linear model on top of the plot\n\n\n\ngf_lm()\nThe gf_lm() function plots a linear model on an existing graph.\nSyntax\ngf_lm(color = \"color_name\")\nExample\n\ngf_point(default_rate ~ pct_PELL, data = dat) %&gt;% \n  gf_lm(color = \"orange\")\n\n\n\n\n\n\n\n\n\ncolor = \"orange\" sets the color of the fitted line\n\n\n\nlm()\nThe lm() function fits a linear regression model.\nSyntax\nmodel_name &lt;- lm(outcome ~ predictor, data = dataset_name)\nExample\n\nPELL_model &lt;- lm(default_rate ~ pct_PELL, data = dat)\nPELL_model\n\n\nCall:\nlm(formula = default_rate ~ pct_PELL, data = dat)\n\nCoefficients:\n(Intercept)     pct_PELL  \n     3.7989       0.1155  \n\n\n\ndefault_rate ~ pct_PELL specifies the outcome and predictor\ndata = dat indicates the dataset used\nPELL_model &lt;- stores the model in an object named PELL_model\nPrinting the model displays the estimated coefficients\n\n\n\nsummary()\nThe summary() function displays detailed information about a fitted regression model.\nSyntax\nsummary(model_name)\nExample\n\nsummary(PELL_model)\n\n\nCall:\nlm(formula = default_rate ~ pct_PELL, data = dat)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-14.669  -3.914  -0.974   3.113  47.142 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)   3.7989     0.2095   18.14   &lt;2e-16 ***\npct_PELL      0.1155     0.0042   27.50   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 5.68 on 4433 degrees of freedom\nMultiple R-squared:  0.1457,    Adjusted R-squared:  0.1455 \nF-statistic: 756.2 on 1 and 4433 DF,  p-value: &lt; 2.2e-16\n\n\n\nThe output includes coefficient estimates and model statistics\nLook for Multiple R-squared to find the \\(R^2\\) value",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Useful R Commands</span>"
+    ]
+  },
+  {
+    "objectID": "commands.html#notebook-3-multiple-regression",
+    "href": "commands.html#notebook-3-multiple-regression",
+    "title": "Useful R Commands",
+    "section": "Notebook 3: Multiple Regression",
+    "text": "Notebook 3: Multiple Regression\n\nlm()\nThe lm() function can be used to fit a multiple regression model, where one outcome (\\(y\\)) variable is predicted using two or more predictors (\\(x_1, x_2, x_3, \\ldots\\)).\nSyntax\nmodel_name &lt;- lm(y ~ x1 + x2 + x3 + ..., data = dataset_name)\nExample\n\ntuition_grad_model &lt;- lm(default_rate ~ net_tuition + grad_rate, data = dat)\ntuition_grad_model\n\n\nCall:\nlm(formula = default_rate ~ net_tuition + grad_rate, data = dat)\n\nCoefficients:\n(Intercept)  net_tuition    grad_rate  \n   13.04211     -0.18993     -0.03501  \n\n\n\ndefault_rate is the outcome (\\(y\\)) variable\nnet_tuition and grad_rate are predictor variables\nThe + symbol adds predictors to the model\ndata = dat tells R which dataset to use\ntuition_grad_model &lt;- stores the model in an object named tuition_grad_model\n\nRunning tuition_grad_model prints the estimated coefficients of the regression model.\n\n\nsummary()\nThe summary() function displays detailed information about a multiple regression model.\nSyntax\nsummary(model_name)\nExample\n\nsummary(tuition_grad_model)\n\n\nCall:\nlm(formula = default_rate ~ net_tuition + grad_rate, data = dat)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-12.188  -4.049  -1.336   2.751  49.669 \n\nCoefficients:\n             Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 13.042108   0.238579  54.666  &lt; 2e-16 ***\nnet_tuition -0.189926   0.012953 -14.663  &lt; 2e-16 ***\ngrad_rate   -0.035014   0.004409  -7.941 2.52e-15 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 5.848 on 4432 degrees of freedom\nMultiple R-squared:  0.09465,   Adjusted R-squared:  0.09424 \nF-statistic: 231.7 on 2 and 4432 DF,  p-value: &lt; 2.2e-16\n\n\n\nLook for Multiple R-squared to find the \\(R^2\\) value\nLook for Adjusted R-squared to see the \\(R^2\\) adjusted for the number of predictors",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Useful R Commands</span>"
+    ]
+  },
+  {
+    "objectID": "commands.html#notebook-4-machine-learning",
+    "href": "commands.html#notebook-4-machine-learning",
+    "title": "Useful R Commands",
+    "section": "Notebook 4: Machine Learning",
+    "text": "Notebook 4: Machine Learning\n\npoly()\nThe poly() function adds polynomial terms to a regression model.\nSyntax\npoly(variable_name, degree)\nExample\n\nsat_model_2 &lt;- lm(default_rate ~ poly(SAT_avg, 2), data = sample_dat)\n\nsat_model_2\n\n\nCall:\nlm(formula = default_rate ~ poly(SAT_avg, 2), data = sample_dat)\n\nCoefficients:\n      (Intercept)  poly(SAT_avg, 2)1  poly(SAT_avg, 2)2  \n            4.065             -8.391              4.355  \n\n\n\ndefault_rate is the outcome (\\(y\\)) variable\nSAT_avg is the predictor (\\(x\\)) variable\npoly(SAT_avg, 2) adds two polynomial terms: \\(x\\) and \\(x^2\\)\ndata = sample_dat specifies the dataset used\nsat_model_2 &lt;- stores the fitted model in an object named sat_model_2\n\nRunning sat_model_2 prints the estimated coefficients of the polynomial regression model.\n\n\npredict()\nThe predict() function generates predictions from a previously fitted model using new data.\nSyntax\npredict(model_name, newdata = dataset_name)\nExample\npredict(sat_model_2, newdata = test)\n\nsat_model_2 is a previously fitted model\nnewdata = test specifies the dataset on which predictions are made\nThe output gives predicted values based on the model ```",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Useful R Commands</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "CourseKata Team. 2024. “Coursekata: An r Package for Teaching\nStatistics and Data Science.” https://coursekata.org.\n\n\nKim, Albert Y., Chester Ismay, and Jennifer Chunn. 2018. “The\nFivethirtyeight r Package: ’Tame Data’ Principles for Introductory\nStatistics and Data Science Courses.” Technology Innovations\nin Statistics Education 11 (1). https://escholarship.org/uc/item/0rx1231m.\n\n\nStokes, David J., and Mahmoud Harding. 2025. “A Project-Based\nApproach to Introductory R and Python for Data\nScience.” https://djstokes02.github.io/IntroRPython4DS/.\n\n\nWickham, Hadley. 2014. “Tidy Data.” Journal of\nStatistical Software 59. https://doi.org/10.18637/jss.v059.i10.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>References</span>"
+    ]
+  },
+  {
+    "objectID": "partners.html",
+    "href": "partners.html",
+    "title": "Partners",
+    "section": "",
+    "text": "CourseKata",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Partners</span>"
+    ]
+  },
+  {
+    "objectID": "partners.html#the-north-carolina-state-data-science-and-ai-academy",
+    "href": "partners.html#the-north-carolina-state-data-science-and-ai-academy",
+    "title": "Partners",
+    "section": "The North Carolina State Data Science and AI Academy",
+    "text": "The North Carolina State Data Science and AI Academy\n\n\n\nNC State Data Science & AI Academy\n\n\nThe NC State Data Science and AI Academy (DSA) supported the After the AP Data Science Challenge by conducting the Survey Response Analysis, which gathered and analyzed educator feedback following the pilot implementation. The analysis, prepared by Taryn Shelton, DSA K–12 Programs Coordinator, helped inform revisions to the challenge and strengthen its alignment with classroom needs. This work reflects DSA’s broader commitment to advancing data science and AI literacy across K–12 education in North Carolina and beyond.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Partners</span>"
+    ]
+  },
+  {
+    "objectID": "partners.html#skew-the-script",
+    "href": "partners.html#skew-the-script",
+    "title": "Partners",
+    "section": "Skew the Script",
+    "text": "Skew the Script\n\n\n\nSkew the Script\n\n\nWhat we do: Skew The Script is a nonprofit that provides free, genuinely relevant math lessons to more than 20,000 teachers nationwide. The organization provides open-source lessons that infuse genuinely relevant contexts and datasets into Algebra 1, Algebra 2, and AP Statistics.\nOur role in the data science challenge: Seeing a demand from AP Statistics teachers to show their students more modern data science skills - beyond the scope of AP Statistics - Skew The Script authored the original data science challenge notebooks. With tremendous support and partnership from Data Science 4 Everyone, CourseKata, and NC State Data Science & AI Academy, Skew The Script led the challenge during its initial years. Skew The Script continues to support the dissemination of the challenge among its network of AP Statistics teachers.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Partners</span>"
+    ]
+  }
+]
