@@ -1,0 +1,51 @@
+---
+title: Dataset
+---
+
+## The College Scorecard Database
+
+The project uses data from the [College Scorecard Database](https://collegescorecard.ed.gov/data). The US Department of Education's College Scorecard Database shows various metrics of cost, enrollment, size, student debt, student demographics, and alumni success. It describes almost every university, college, community college, trade school, and certificate program in the United States. The database was created to increase transparency in higher education and to support analysis of college access, affordability, and outcomes.
+
+::: {.callout-note title="Data Coverage"}
+This dataset includes data from the 2020–2021 academic year only.
+:::
+
+## About the College Scorecard Database
+
+The College Scorecard Database compiles data from multiple federal administrative sources, including the [Integrated Postsecondary Education Data System (IPEDS)](https://nces.ed.gov/ipeds), the [National Student Loan Data System (NSLDS)](https://nsldsfap.ed.gov/login), and federal student aid records. Unlike survey-based datasets, the College Scorecard primarily relies on administrative data reported by institutions or generated through federal programs.
+
+The database is updated annually and includes information for most degree-granting postsecondary institutions that participate in federal financial aid programs. Many variables are available across multiple years, though coverage varies by variable due to changes in reporting requirements, data availability, and methodology.
+
+Because the College Scorecard aggregates data from different sources and cohorts, some measures (such as completion rates, debt, and earnings) are based on specific student subpopulations and time windows. As a result, careful attention to variable definitions, units, and years is required when interpreting results.
+
+## The Project Dataset
+
+The dataset used for this project is a subset of the full College Scorecard Database, downloaded for the 2021-2022 Academic Year. The original database contains thousands of variables and records spanning multiple years and institutions.
+
+### Data Preparation & Cleaning
+
+The dataset used in this project is based on the original College Scorecard data but includes pre-processing steps to make it suitable for classroom use.
+
+The following changes were made prior to student use:
+
+-   Variables were renamed using consistent, descriptive naming conventions.
+-   Categorical variables (such as region, ownership, and highest degree awarded) were standardized for clarity.
+-   Monetary variables were expressed in consistent units to support comparison.
+
+These steps were taken to preserve the structure and intent of the original College Scorecard data while reducing barriers to analysis for students.
+
+Teachers and students should be aware that this dataset is not a raw extract from the College Scorecard Database, but a prepared version designed for instructional use and exploratory analysis.
+
+### Tidy and Tame Data Considerations
+
+The project dataset has been prepared to follow principles of tidy data [@wickham2014tidydata] and tame data [@kim2018fivethirtyeight] to support exploratory analysis.
+
+In this dataset:
+
+-   Each row represents a single institution.
+-   Each column represents a single variable.
+-   Each cell contains a single, well-defined value.
+
+Variables were also selected and organized to make the dataset *tame*, meaning, manageable, interpretable, and appropriate for classroom analysis. This includes limiting the number of variables, using consistent naming conventions, and providing variables that are meaningful for comparative analysis across institutions.
+
+These design choices reduce unnecessary data wrangling and allow students to focus on asking questions, exploring patterns, and interpreting results, while still working with authentic, real-world data.

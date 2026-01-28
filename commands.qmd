@@ -1,0 +1,508 @@
+---
+title: Useful R Commands
+---
+
+```{r}
+#| label: load-packages-data
+#| include: false
+ 
+library(coursekata)
+dat <- read.csv("data/colleges.csv")
+```
+
+## Notebook 1: Basic R & Data Exploration
+
+```{r}
+#| label: setup
+#| include: false
+
+# Packages used in the examples below
+library(coursekata)
+library(dplyr)
+
+# Load the dataset used in examples (update the path if needed)
+dat <- read.csv("data/colleges.csv")
+```
+
+### Assignment Operator (`<-`)
+
+The assignment operator `<-` is used to store a value in an object.
+
+**Syntax**
+
+``` r
+object_name <- value
+```
+
+**Example**
+
+```{r}
+#| label: assignment-operator
+
+# Store value 10 in x
+x <- 10
+
+# Print out value of x
+x
+```
+
+### `head()`
+
+The `head()` function displays the first 6 rows of a dataset.
+
+**Syntax**
+
+``` r
+head(dataset_name)
+```
+
+**Example**
+
+```{r}
+#| label: head-example
+
+head(dat)
+```
+
+### `dim()`
+
+The `dim()` function displays the dimensions (rows × columns) of a dataset.
+
+**Syntax**
+
+``` r
+dim(dataset_name)
+```
+
+**Example**
+
+```{r}
+#| label: dim-example
+
+dim(dat)
+```
+
+The first number is the number of rows (horizontal), and the second is the number of columns (vertical).
+
+### `select()`
+
+The `select()` function is used to select only certain variables (columns) from a dataset.
+
+**Syntax**
+
+``` r
+new_data <- select(dataset_name, col1, col2, ...)
+```
+
+**Example**
+
+```{r}
+#| label: select-example
+
+example_dat <- select(dat, name, median_debt, ownership, admit_rate, hbcu)
+```
+
+### `subset()`
+
+The `subset()` function filters a dataset to obtain certain observations (rows), based on conditions.
+
+**Syntax**
+
+``` r
+subset(dataset_name, condition)
+```
+
+**Example**
+
+```{r}
+#| label: subset-example
+
+subset(example_dat, hbcu == "Yes" & admit_rate < 40)
+```
+
+### Common Conditions
+
+| Operator | Meaning                  | Example.         |
+|----------|--------------------------|------------------|
+| `==`     | Equals exactly           | `x == 10`        |
+| `!=`     | Does not equal           | `x != 10`        |
+| `<`      | Less than                | `x < 10`         |
+| `>`      | Greater than             | `x > 10`         |
+| `<=`     | Less than or equal to    | `x <= 10`        |
+| `>=`     | Greater than or equal to | `x >= 10`        |
+| `|`      | Logical OR               | `x < 5 | x > 10` |
+| `&`      | Logical AND              | `x > 5 & x < 10` |
+
+### `arrange()`
+
+The `arrange()` function orders the rows in a dataset based on one or more variables.
+
+**Syntax**
+
+``` r
+arrange(data_name, column_name)
+```
+
+**Example (ascending order)**
+
+``` r
+arrange(example_dat, admit_rate)
+```
+
+```{r}
+#| label: arrange-ascending
+#| echo: false
+arrange(example_dat, admit_rate) |> head()
+```
+
+### `desc()`
+
+The `desc()` function modifies `arrange()` to put data in descending order.
+
+**Syntax**
+
+``` r
+arrange(dataset_name, desc(column_name))
+```
+
+**Example (descending order)**
+
+``` r
+arrange(example_dat, desc(admit_rate))
+```
+
+```{r}
+#| label: arrange-descending
+#| echo: false
+
+arrange(example_dat, desc(admit_rate)) |> head()
+```
+
+### (`$`) operator
+
+The `$` operator selects a single variable (column) from a dataset.
+
+**Syntax**
+
+``` r
+dataset_name$column_name
+```
+
+### `table()`
+
+The `table()` function displays frequency counts for the values of a categorical variable.
+
+**Syntax**
+
+``` r
+table(dataset_name$column_name)
+```
+
+**Example**
+
+```{r}
+#| label: table-example
+
+table(dat$highest_degree)
+```
+
+### `gf_histogram()`
+
+The `gf_histogram()` function creates a histogram of a quantitative variable.
+
+**Syntax**
+
+``` r
+gf_histogram(~variable_name, data = dataset_name)
+```
+
+**Example**
+
+```{r}
+#| label: gf-histogram-example
+
+gf_histogram(~admit_rate, data = dat)
+```
+
+### `gf_bar()`
+
+The `gf_bar()` function creates a bar plot of a categorical variable.
+
+**Syntax**
+
+``` r
+gf_bar(~variable_name, data = dataset_name)
+```
+
+**Example**
+
+```{r}
+#| label: gf-bar-example
+
+gf_bar(~highest_degree, data = dat)
+```
+
+### (`~`) Symbol
+
+The `~` symbol is often used to separate the outcome variable ($y$) and predictor variable ($x$) in graphs and models:
+
+``` r
+outcome ~ predictor
+```
+
+### `gf_boxplot()`
+
+The `gf_boxplot()` function creates boxplots.
+
+**Syntax**
+
+``` r
+gf_boxplot(outcome ~ predictor, data = dataset_name)
+```
+
+**Example**
+
+```{r}
+#| label: gf-boxplot-example
+
+gf_boxplot(admit_rate ~ highest_degree, data = dat)
+```
+
+-   `admit_rate ~ highest_degree` means that `admit_rate` is the outcome ($y$) variable and `highest_degree` is the predictor ($x$) variable.
+-   The boxplot displays `admit_rate` on the $y-$axis and `highest_degree` on the $x-$axis.
+
+## Notebook 2: Simple Linear Regression
+
+### (`~`) Symbol
+
+The `~` symbol is used to separate the outcome ($y$) variable and the predictor ($x$) variable in graphs and models.
+
+**Syntax**
+
+``` r
+outcome ~ predictor
+```
+
+**Example**
+
+```{r}
+#| label: model-example
+
+default_rate ~ pct_PELL
+```
+
+In this example, `default_rate` is the outcome ($y$) variable and `pct_PELL` is the predictor ($x$) variable.
+
+### `gf_point()`
+
+The `gf_point()` function creates a scatterplot.
+
+**Syntax**
+
+``` r
+gf_point(outcome ~ predictor, data = dataset_name)
+```
+
+**Example**
+
+```{r}
+#| label: gf-point-example
+
+gf_point(default_rate ~ pct_PELL, data = dat)
+```
+
+-   `default_rate ~ pct_PELL` specifies default rate on the $y$-axis and percent PELL on the $x$-axis
+-   `data = dat` tells the function which dataset to use
+
+### (`%>%`) Pipe Operator
+
+The `%>%` operator pipes the result of one command into the next command. It is often used to layer models on top of graphs.
+
+**Syntax**
+
+``` r
+command_1 %>% command_2
+```
+
+**Example**
+
+```{r}
+#| label: gf-point-lm-pipe
+
+gf_point(default_rate ~ pct_PELL, data = dat) %>%
+gf_lm(color = "orange")
+```
+
+-   The first command creates the scatterplot
+-   The second command overlays a linear model on top of the plot
+
+### `gf_lm()`
+
+The `gf_lm()` function plots a linear model on an existing graph.
+
+**Syntax**
+
+``` r
+gf_lm(color = "color_name")
+```
+
+**Example**
+
+```{r}
+gf_point(default_rate ~ pct_PELL, data = dat) %>% 
+  gf_lm(color = "orange")
+```
+
+-   `color = "orange"` sets the color of the fitted line
+
+### `lm()`
+
+The `lm()` function fits a linear regression model.
+
+**Syntax**
+
+``` r
+model_name <- lm(outcome ~ predictor, data = dataset_name)
+```
+
+**Example**
+
+```{r}
+#| label: lm-example
+
+PELL_model <- lm(default_rate ~ pct_PELL, data = dat)
+PELL_model
+```
+
+-   `default_rate ~ pct_PELL` specifies the outcome and predictor
+-   `data = dat` indicates the dataset used
+-   `PELL_model <-` stores the model in an object named `PELL_model`
+-   Printing the model displays the estimated coefficients
+
+### `summary()`
+
+The `summary()` function displays detailed information about a fitted regression model.
+
+**Syntax**
+
+``` r
+summary(model_name)
+```
+
+**Example**
+
+```{r}
+#| label: summary-example
+
+summary(PELL_model)
+```
+
+-   The output includes coefficient estimates and model statistics
+-   Look for **Multiple R-squared** to find the $R^2$ value
+
+## Notebook 3: Multiple Regression
+
+### `lm()`
+
+The `lm()` function can be used to fit a multiple regression model, where one outcome ($y$) variable is predicted using two or more predictors ($x_1, x_2, x_3, \ldots$).
+
+**Syntax**
+
+``` r
+model_name <- lm(y ~ x1 + x2 + x3 + ..., data = dataset_name)
+```
+
+**Example**
+
+```{r}
+#| label: multiple-regression-example
+
+tuition_grad_model <- lm(default_rate ~ net_tuition + grad_rate, data = dat)
+tuition_grad_model
+```
+
+-   `default_rate` is the outcome ($y$) variable
+-   `net_tuition` and `grad_rate` are predictor variables
+-   The `+` symbol adds predictors to the model
+-   `data = dat` tells R which dataset to use
+-   `tuition_grad_model <-` stores the model in an object named `tuition_grad_model`
+
+Running `tuition_grad_model` prints the estimated coefficients of the regression model.
+
+### `summary()`
+
+The `summary()` function displays detailed information about a multiple regression model.
+
+**Syntax**
+
+``` r
+summary(model_name)
+```
+
+**Example**
+
+```{r}
+#| label: multiple-regression-summary
+
+summary(tuition_grad_model)
+```
+
+-   Look for **Multiple R-squared** to find the $R^2$ value
+-   Look for **Adjusted R-squared** to see the $R^2$ adjusted for the number of predictors
+
+## Notebook 4: Machine Learning
+
+### `poly()`
+
+The `poly()` function adds polynomial terms to a regression model.
+
+**Syntax**
+
+``` r
+poly(variable_name, degree)
+```
+
+**Example**
+
+```{r}
+#| label: sample_dat-example
+#| include: false
+dat <- read.csv("data/four_year_colleges.csv")
+set.seed(2)
+sample_dat <- sample(dat, size = 20)
+```
+
+```{r}
+#| label: polynomial-model-example
+sat_model_2 <- lm(default_rate ~ poly(SAT_avg, 2), data = sample_dat)
+
+sat_model_2
+```
+
+-   `default_rate` is the outcome ($y$) variable
+-   `SAT_avg` is the predictor ($x$) variable
+-   `poly(SAT_avg, 2)` adds two polynomial terms: $x$ and $x^2$
+-   `data = sample_dat` specifies the dataset used
+-   `sat_model_2 <-` stores the fitted model in an object named `sat_model_2`
+
+Running `sat_model_2` prints the estimated coefficients of the polynomial regression model.
+
+### `predict()`
+
+The `predict()` function generates predictions from a previously fitted model using new data.
+
+**Syntax**
+
+``` r
+predict(model_name, newdata = dataset_name)
+```
+
+**Example**
+
+``` r
+predict(sat_model_2, newdata = test)
+```
+
+-   `sat_model_2` is a previously fitted model
+-   `newdata = test` specifies the dataset on which predictions are made
+-   The output gives predicted values based on the model \`\`\`

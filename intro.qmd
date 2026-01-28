@@ -1,0 +1,17 @@
+---
+title: Introduction
+---
+
+## Purpose
+
+This resource is a teacher guide for a data science project designed to extend student learning beyond the AP Statistics course. The guide supports high school statistics teachers in planning and facilitating a data science project that builds on students’ prior statistics experience and does not assume prior coursework in programming or data science.
+
+It explains the structure of the project, the dataset used, and the types of analyses students are expected to pursue. The project is intended for students who have completed AP Statistics.
+
+::: {.callout-note title="Data Science Tools"}
+This project uses R with the `coursekata` package [@coursekata] for both data manipulation and visualization.
+:::
+
+## Standards Alignment
+
+The project aligns with both the [Pre-K–12 Guidelines for Assessment and Instruction in Statistics Education II (GAISE II)](https://www.amstat.org/docs/default-source/amstat-documents/gaiseiiprek-12_full.pdf?v=1) and the [Data Science Learning Progressions](https://datasciencelearning.org/).

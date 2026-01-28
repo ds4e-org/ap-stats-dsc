@@ -1,0 +1,36 @@
+---
+title: Variables
+---
+
+## Names & Descriptions
+
+This table provides brief descriptions of each variable used in the project. It is intended as a quick reference for understanding what each variable represents.
+
+| Variable | Description |
+|----|----|
+| `opeid` | Official ID number for the college or institution. |
+| `name` | Name of the college or institution. |
+| `city` | City in which the college or institution is located. |
+| `state` | State in which the college or institution is located. |
+| `region` | U.S. geographic region in which the college or institution is located. |
+| `median_debt` | Median student loan amount at the time of entering repayment, in thousands of dollars. |
+| `default_rate` | Percent of the institution’s borrowers in default on student loans (recent cohorts), including graduates, transfers, and dropouts. |
+| `highest_degree` | Highest degree awarded by the institution (Certificate, Associates, Bachelors, Graduate). |
+| `ownership` | Control of the institution (Public, Private nonprofit, Private for-profit). |
+| `locale` | Locale surrounding the institution (Large City, Small City, Suburb, Town, Rural). |
+| `hbcu` | Indicator for historically Black colleges and universities (No, Yes). |
+| `admit_rate` | Percent of applicants who were offered admission. |
+| `sat_avg` | Average equivalent SAT score of admitted students. |
+| `online_only` | Indicator for whether the institution offers only distance (online) classes (No, Yes). |
+| `enrollment` | Number of undergraduate or certificate-seeking students enrolled. |
+| `net_price` | Average cost of attendance minus average financial aid, in thousands of dollars. |
+| `avg_cost` | Average cost of attendance, including tuition, books, and living expenses, in thousands of dollars. |
+| `net_tuition` | Net tuition revenue per student (tuition minus discounts and allowances), in thousands of dollars. |
+| `ed_spending_per_student` | Instructional expenditures per student, in thousands of dollars. |
+| `avg_faculty_salary` | Average faculty salary, in thousands of dollars. |
+| `pct_pell` | Percent of undergraduates who received a Pell Grant. |
+| `pct_fed_loan` | Percent of undergraduates who received a federal student loan. |
+| `grad_rate` | Graduation rate within 150% of normal time (e.g., within 6 years for a 4-year degree). |
+| `pct_firstgen` | Percent of students who are first-generation college students. |
+| `med_fam_income` | Median family income of students, in thousands of dollars. |
+| `med_alum_earnings` | Median earnings of former students 10 years after entry, in thousands of dollars. |
