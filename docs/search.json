@@ -194,7 +194,7 @@
     "href": "partners.html",
     "title": "Partners",
     "section": "",
-    "text": "CourseKata",
+    "text": "Skew the Script\nWhat we do: Skew The Script is a nonprofit that provides free, genuinely relevant math lessons to more than 20,000 teachers nationwide. The organization provides open-source lessons that infuse genuinely relevant contexts and datasets into Algebra 1, Algebra 2, and AP Statistics.\nOur role in the data science challenge: Seeing a demand from AP Statistics teachers to show their students more modern data science skills - beyond the scope of AP Statistics - Skew The Script authored the original data science challenge notebooks. With tremendous support and partnership from Data Science 4 Everyone, CourseKata, and NC State Data Science & AI Academy, Skew The Script led the challenge during its initial years. Skew The Script continues to support the dissemination of the challenge among its network of AP Statistics teachers.",
     "crumbs": [
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Partners</span>"
     ]
@@ -213,8 +213,18 @@
     "objectID": "partners.html#skew-the-script",
     "href": "partners.html#skew-the-script",
     "title": "Partners",
-    "section": "Skew the Script",
-    "text": "Skew the Script\n\n\n\nSkew the Script\n\n\nWhat we do: Skew The Script is a nonprofit that provides free, genuinely relevant math lessons to more than 20,000 teachers nationwide. The organization provides open-source lessons that infuse genuinely relevant contexts and datasets into Algebra 1, Algebra 2, and AP Statistics.\nOur role in the data science challenge: Seeing a demand from AP Statistics teachers to show their students more modern data science skills - beyond the scope of AP Statistics - Skew The Script authored the original data science challenge notebooks. With tremendous support and partnership from Data Science 4 Everyone, CourseKata, and NC State Data Science & AI Academy, Skew The Script led the challenge during its initial years. Skew The Script continues to support the dissemination of the challenge among its network of AP Statistics teachers.",
+    "section": "",
+    "text": "Skew the Script",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Partners</span>"
+    ]
+  },
+  {
+    "objectID": "partners.html#coursekata",
+    "href": "partners.html#coursekata",
+    "title": "Partners",
+    "section": "CourseKata",
+    "text": "CourseKata",
     "crumbs": [
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Partners</span>"
     ]

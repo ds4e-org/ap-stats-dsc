@@ -5,13 +5,13 @@ title: Preface
 ::::::: columns
 :::: {.column width="50%"}
 ::: {style="text-align: left;"}
-![](images/ds4e-main-logo.png){width="68%" fig-cap="" align="left"}
+![](images/ds4e-main-logo.png){width="68%"}
 :::
 ::::
 
 :::: {.column width="50%"}
 ::: {style="text-align: left;"}
-![](images/skew-the-script-logo.png){height="120px" fig-cap=""}
+![](images/skew-the-script-logo.png){height="120px"}
 :::
 ::::
 :::::::
@@ -19,13 +19,13 @@ title: Preface
 ::::::: columns
 :::: {.column width="50%"}
 ::: {style="text-align: left;"}
-![](images/course-kata-logo.png){height="70px" fig-cap=""}
+![](images/course-kata-logo.png){height="70px" style="margin-top:20px;"}
 :::
 ::::
 
 :::: {.column width="50%"}
 ::: {style="text-align: left;"}
-![](images/dsa-logo.png){height="130px" fig-cap=""}
+![](images/dsa-logo.png){height="135px"}
 :::
 ::::
 :::::::
