@@ -11,7 +11,3 @@ It explains the structure of the project, the dataset used, and the types of ana
 ::: {.callout-note title="Data Science Tools"}
 This project uses R with the `coursekata` package [@coursekata] for both data manipulation and visualization.
 :::
-
-## Standards Alignment
-
-The project aligns with both the [Pre-K–12 Guidelines for Assessment and Instruction in Statistics Education II (GAISE II)](https://www.amstat.org/docs/default-source/amstat-documents/gaiseiiprek-12_full.pdf?v=1) and the [Data Science Learning Progressions](https://datasciencelearning.org/).
