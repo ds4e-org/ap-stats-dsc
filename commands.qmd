@@ -31,7 +31,7 @@ The assignment operator `<-` is used to store a value in an object.
 **Syntax**
 
 ``` r
-object_name <- value
+variable_name <- value
 ```
 
 **Example**

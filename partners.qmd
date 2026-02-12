@@ -14,7 +14,7 @@ title: Partners
 
 ![CourseKata](images/ck-image.png)
 
-The After the AP Data Science Challenge uses Jupyter notebooks hosted on CKHub, developed by [CourseKata](https://coursekata.org). If this challenge sparked your interest, explore [CourseKata.org](https://coursekata.org) for more classroom-ready resources like these, including materials you can use throughout the year to supplement your regular curriculum.
+The After the AP Data Science Challenge uses Jupyter notebooks hosted on CKHub, developed by [CourseKata](https://coursekata.org). If this challenge sparked your interest, contact us [CourseKata.org](https://www.coursekata.org/internal/after-the-ap-challenge) for more classroom-ready resources like these, including materials you can use throughout the year to supplement your regular curriculum.
 
 We’re a nonprofit team of educators and learning scientists who build both full-year and supplementary statistics and data science curricula using the same kinds of Jupyter notebooks, real datasets, and modeling tools used in the challenge.
 
