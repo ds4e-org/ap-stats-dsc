@@ -6,13 +6,12 @@ book:
   title: After the AP Statistics Data Science Challenge
   subtitle: A Teacher Guide for a Data Science Project
   author:
-  - name: Mahmoud Harding
-    affiliation: Data Science 4 Everyone
   - name: Dashiell Young-Saver
     affiliation: Skew the Script
   - name: Ivonne Martinez
     affiliation: Skew the Script
-  date: today
+  - name: Mahmoud Harding
+    affiliation: Data Science 4 Everyone
   chapters:
     - index.qmd
     - intro.qmd
@@ -33,6 +32,8 @@ format:
       - brand
   pdf:
     documentclass: scrreprt
+
+date: today
 
 number-sections: false
 
