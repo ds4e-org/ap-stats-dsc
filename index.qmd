@@ -2,33 +2,7 @@
 title: Preface
 ---
 
-::::::: columns
-:::: {.column width="50%"}
-::: {style="text-align: left;"}
-![](images/ds4e-main-logo.png){width="68%"}
-:::
-::::
-
-:::: {.column width="50%"}
-::: {style="text-align: left;"}
-![](images/skew-the-script-logo.png){height="120px"}
-:::
-::::
-:::::::
-
-::::::: columns
-:::: {.column width="50%"}
-::: {style="text-align: left;"}
-![](images/course-kata-logo.png){height="70px" style="margin-top:20px;"}
-:::
-::::
-
-:::: {.column width="50%"}
-::: {style="text-align: left;"}
-![](images/dsa-logo.png){height="135px"}
-:::
-::::
-:::::::
+![](images/college-price-tag.png)
 
 This resource is intended for high school statistics teachers seeking to extend student learning beyond AP Statistics course. It provides a teacher-facing guide for the After the AP Data Science Challenge.
 
